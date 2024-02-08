@@ -1,10 +1,11 @@
 
 import ImageBurguer from '../ImageBurguer'
-import {ContentTextInformation, TitleInformation, SubTitleInformation, ContainerGalery, Text, Button, ImageBackgroundBurguer } from './style'
+import {ContentTextInformation, TitleInformation, SubTitleInformation, ContainerGalery, Text, ImageBackgroundBurguer } from './style'
 import imgburguer1 from '../../images/imgBurguers/burguerCheddar.svg'
 import imgburguer2 from '../../images/imgBurguers/burguerTicken.svg'
 import imgburguer3 from '../../images/imgBurguers/saltBurguer.svg'
 import backgroundBurguer from '../../images/imgBurguers/imgBackgrounBurguer.svg'
+import Button from '../Button'
 
 
 export default function ContentSobre(){
@@ -15,7 +16,7 @@ export default function ContentSobre(){
                 <SubTitleInformation>Conheça a nossa história</SubTitleInformation>
                 <Text>A Ramozz Burguer nasceu do sonho de levar felicidade em forma de hamburguer, fazer alguém feliz e apaixonadopor hamburguer na primeira mordida.</Text>
                 <Text>Está na hora de mergulhar em um mundo de sabor e diversão.</Text>
-                <Button>Saiba Mais</Button>
+                <Button label={'Saiba Mais'} link={'sobre'}/>
             </ContentTextInformation>
             <ContainerGalery>
                 <ImageBurguer src={imgburguer1}/>

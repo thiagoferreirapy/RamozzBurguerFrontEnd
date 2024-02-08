@@ -8,33 +8,39 @@ import Container from './layouts/container/Container';
 // thems
 import theme from '../theme';
 import { ThemeProvider } from 'styled-components';
+import {ScrollProvider, useScroll } from './service/ScrollContext.jsx';
 // Swiper
 import 'swiper/swiper-bundle.css';
 import Footer from './layouts/footer/Footer';
+import Sobre from './pages/sobre/Sobre'
+import Cardapio from './pages/cardapio/Cardapio.jsx';
 
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        {/* <Header/> */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Container customClass='min-height'>
-                <Outlet />
-              </Container>
-            }
-          >
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-       <Footer/>
+        <ScrollProvider>
+          {/* <Header/> */}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Container customClass='min-height'>
+                  <Outlet />
+                </Container>
+              }
+            >
+              <Route index element={<Home />} />
+              <Route path="sobre" element={<Sobre />} />
+              <Route path="cardapio" element={<Cardapio />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </ScrollProvider>
       </Router>
     </ThemeProvider>
-  )
+  );
 }
 
 export default App

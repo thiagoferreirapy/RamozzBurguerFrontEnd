@@ -28,6 +28,10 @@ export default function Slider (){
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
+        style={{
+          '--swiper-pagination-color': '#fff',
+          '--swiper-navigation-color': '#fff',
+        }}
         effect='fade'
         autoplay={{
           delay: 10000,

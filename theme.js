@@ -1,7 +1,7 @@
 const theme = {
     colors: {
       green: '#365C32',
-      secondary: '#6c757d',
+      secondary: '#4c4c4c',
       white: '#ffffff',
       // Adicione mais variáveis de cor conforme necessário
       black: '#1a1a1a',

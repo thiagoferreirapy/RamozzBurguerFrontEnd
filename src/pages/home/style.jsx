@@ -58,25 +58,25 @@ export const Text = styled.p`
     margin-bottom: 25px;
 `
 
-export const Button = styled.button`
-    width: 230px;
-    height: 45px;
-    border: none;
-    border-radius: 10px;
-    background-color: #4a6a46;
-    cursor: pointer;
+// export const Button = styled.button`
+//     width: 230px;
+//     height: 45px;
+//     border: none;
+//     border-radius: 10px;
+//     background-color: #4a6a46;
+//     cursor: pointer;
 
-    font-size: 16px;
-    font-weight: 800;
-    text-transform: uppercase;
+//     font-size: 16px;
+//     font-weight: 800;
+//     text-transform: uppercase;
 
-    transition: 0.3s all ease-in-out;
-    &:hover{
-        background-color: ${(props) => props.theme.colors.green};
-        filter: none;
-        opacity: 100%;
-    }
-`
+//     transition: 0.3s all ease-in-out;
+//     &:hover{
+//         background-color: ${(props) => props.theme.colors.green};
+//         filter: none;
+//         opacity: 100%;
+//     }
+// `
 
 
 export const ContainerSobre = styled.section`

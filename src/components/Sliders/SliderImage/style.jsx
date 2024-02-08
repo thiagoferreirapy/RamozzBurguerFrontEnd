@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const ContentSlider = styled.div`
     width: 100%;
     height: 450px;
+    z-index: -2;
 `
 export const ImageSlider = styled.img`
     width: 100%;

@@ -2,7 +2,7 @@ import ImageLogo from '../../components/ImageLogo';
 import Header from '../../layouts/header/Header';
 import  {Main, ContainerInicial, ContentTitle,
     Title, SubTitle, ContentButtonLink,
-    Text, Button, ContainerSobre, ContainerGalery, ContainerOrcamento } from './style';
+    Text, ContainerSobre, ContainerGalery, ContainerOrcamento } from './style';
 
 import logo from '../../images/logo.svg'
 
@@ -12,6 +12,7 @@ import ContentGalery from '../../components/Galeria/ContentGalery';
 // Swiper
 import 'swiper/swiper-bundle.css';
 import ContentOrcamento from '../../components/Orcamento/ContentOrcamento';
+import Button from '../../components/Button';
 
 
 export default function Home() { 
@@ -27,7 +28,7 @@ export default function Home() {
                 </ContentTitle>
                 <ContentButtonLink>
                     <Text>Delivery em funcionamento até as 22h</Text>
-                    <Button>Peça já o seu!</Button>
+                    <Button label={'PEÇA JÁ O SEU!'} link={'delivery'} />
                 </ContentButtonLink>
             </ContainerInicial>
             <ContainerSobre>
