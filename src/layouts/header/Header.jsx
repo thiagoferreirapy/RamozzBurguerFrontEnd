@@ -5,6 +5,8 @@ import { useScroll } from '../../service/ScrollContext';
 import  { HeaderContainer, ImgLogo, Links, MenuBar } from './style';
 import logo from '../../images/logo.svg'
 import ImageLogo from '../../components/ImageLogo';
+import LoginModal from '../../components/Modal/LoginUserModal/LoginModal';
+import RegisterModal from '../../components/Modal/RegisterUserModal/RegisterModal';
 
 
 export default function Header(){
@@ -33,7 +35,7 @@ export default function Header(){
                <Links to={'/cardapio'}>CARDÁPIO</Links> 
                <Links to={'/'}>DELIVERY</Links> 
                <Links to={'/'}>PEDIDOS</Links> 
-               <Links to={'/'}>ENTRE OU CADASTRE-SE</Links> 
+               <RegisterModal/>
             </MenuBar>
         </HeaderContainer>
     )
