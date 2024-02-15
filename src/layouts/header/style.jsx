@@ -34,7 +34,14 @@ export const Links = styled(Link)`
     cursor: pointer;
     transition: 0.3s all ease-in-out;
     border-bottom: 2px solid transparent;
+
+    
     &:hover{
+        color: #365C32;
+        font-weight: 600;
+        border-bottom: 2px solid #fff;
+    }
+    &:focus {
         color: #365C32;
         font-weight: 600;
         border-bottom: 2px solid #fff;

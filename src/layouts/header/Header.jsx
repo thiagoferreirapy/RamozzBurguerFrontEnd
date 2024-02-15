@@ -9,7 +9,7 @@ import LoginModal from '../../components/Modal/LoginUserModal/LoginModal';
 import RegisterModal from '../../components/Modal/RegisterUserModal/RegisterModal';
 
 
-export default function Header(){
+export default function Header({ currentPage }){
   const { isScrolled, setScroll } = useScroll();
 
   const handleScroll = () => {
@@ -25,17 +25,33 @@ export default function Header(){
     };
   }, []);
 
+  const [modalAberto, setModalAberto] = useState(false);
+
+  const abrirModal = () => {
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+  };
+
+
     return (
         <HeaderContainer isScrolled={isScrolled}>
             <ImageLogo src={logo}/>
             
             <MenuBar>
                <Links to={'/'}>INÍCIO</Links> 
+               
                <Links to={'/sobre'}>QUEM SOMOS</Links> 
                <Links to={'/cardapio'}>CARDÁPIO</Links> 
-               <Links to={'/'}>DELIVERY</Links> 
-               <Links to={'/'}>PEDIDOS</Links> 
-               <RegisterModal/>
+               <Links to={'/delivery'}>DELIVERY</Links> 
+               <Links to={'/'}>PEDIDOS</Links>
+               {/* <LoginModal/> */}
+               <Links onClick={abrirModal}>ENTRE OU CADASTRE-SE</Links>
+
+                {/* Renderize o componente LoginModal e passe as funções de abrir e fechar modal como propriedades */}
+                <LoginModal isOpen={modalAberto} onRequestClose={fecharModal} />
             </MenuBar>
         </HeaderContainer>
     )

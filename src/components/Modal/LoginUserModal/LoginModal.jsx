@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import {Teste, ActiveModal, ModalWrapper,ContentTitleModal,ContentModalForm, Title, Text, TitleModal, Close, ContentForm,  Input, Link, ContentRegisterRoute, Button} from './style'
+import {Teste, ActiveModal, ModalWrapper,ContentTitleModal,ContentModalForm, Title, Text, TextRegister, TitleModal, Close, ContentForm,  Input, Link, ContentRegisterRoute, Button} from './style'
 
 import iconClose from '../../../images/icons/buttonClose.svg'
 
 
-60
-export default function LoginModal(){
+import RegisterModal from '../RegisterUserModal/RegisterModal';
+
+export default function LoginModal({ isOpen, onRequestClose }){
   const [modalAberto, setModalAberto] = useState(false);
 
   const abrirModal = () => {
@@ -14,15 +15,17 @@ export default function LoginModal(){
   };
 
   const fecharModal = () => {
-    setModalAberto(false);
+    // Chame a função onRequestClose para fechar o modal
+    onRequestClose();
   };
 
   return (
     <div>
-      <ActiveModal onClick={abrirModal}>ENTRE OU CADASTRE-SE</ActiveModal>
+      {/* <ActiveModal onClick={abrirModal}>ENTRE OU CADASTRE-SE</ActiveModal> */}
 
       <Modal
-        isOpen={modalAberto}
+        // isOpen={modalAberto}
+        isOpen={isOpen}
         onRequestClose={fecharModal}
         contentLabel="Exemplo de Modal"
         style={{
@@ -51,7 +54,7 @@ export default function LoginModal(){
                 </ContentForm>
                 <ContentRegisterRoute>
                     <Text>ou</Text>
-                    <Text>Não possui uma conta? <strong><Link>Cadastre-se!</Link></strong></Text>
+                    <TextRegister>Não possui uma conta? <strong><RegisterModal/></strong></TextRegister>
                     
                 </ContentRegisterRoute>
             </ContentModalForm>

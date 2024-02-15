@@ -14,6 +14,7 @@ import 'swiper/swiper-bundle.css';
 import Footer from './layouts/footer/Footer';
 import Sobre from './pages/sobre/Sobre'
 import Cardapio from './pages/cardapio/Cardapio.jsx';
+import Delivery from './pages/delivery/Delivery.jsx';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="sobre" element={<Sobre />} />
               <Route path="cardapio" element={<Cardapio />} />
+              <Route path="delivery" element={<Delivery />} />
             </Route>
           </Routes>
           <Footer />

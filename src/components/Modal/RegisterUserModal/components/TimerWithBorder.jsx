@@ -69,16 +69,27 @@ const Counter = styled.div`
   z-index: 5;
 `;
 
-const StyledLoader = () => {
+const StyledLoader = ({ onTimeUpdate }) => {
+  // const [time, setTime] = useState(60);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTime((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+  //   }, 1000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
   const [time, setTime] = useState(60);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTime((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+      // Chame a função de callback sempre que o valor de `time` for atualizado
+      onTimeUpdate(time);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [onTimeUpdate, time]);
 
   return (
     <ContainerTime>

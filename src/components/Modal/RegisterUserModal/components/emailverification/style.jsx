@@ -45,3 +45,25 @@ export const ContentButtons = styled.div`
     justify-content: space-between;
 
 `;
+export const AlertCode = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+`;
+
+
+export const MsgAlert = styled.p`
+    background-color: ${(props) => props.theme.colors.danger};
+    width: auto;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+`;

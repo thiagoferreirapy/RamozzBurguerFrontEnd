@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+
 
 export const FooterContainer = styled.section`
     width: 100%;
@@ -104,8 +106,9 @@ export const ContentAling = styled.div`
 `
 
 
-export const Links = styled.a`
+export const Links = styled(Link)`
     text-decoration: none;
+    color: #fff;
     font-size: 18px;
     font-weight: 600;
     margin-top: 15px;

@@ -32,12 +32,12 @@ export default function Footer(){
                 <ContentLinksInstitucional>
                     <ContentAlingText>
                         <SubTitle>Institucional</SubTitle>
-                        <Links>Home</Links>
-                        <Links>Quem Somos</Links>
-                        <Links>Cardápio</Links>
-                        <Links>Delivery</Links>
-                        <Links>Orçamentos</Links>
-                        <Links>Contato</Links>
+                        <Links to={'/'}>Home</Links>
+                        <Links to={'/sobre'}>Quem Somos</Links>
+                        <Links to={'/cardapio'}>Cardápio</Links>
+                        <Links to={'/'}>Delivery</Links>
+                        <Links to={'/'}>Orçamentos</Links>
+                        <Links to={'/'}>Contato</Links>
                     </ContentAlingText>
                 </ContentLinksInstitucional>
 

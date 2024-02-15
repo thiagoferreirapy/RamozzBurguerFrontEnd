@@ -24,7 +24,7 @@ export default function Button({label, link}){
     return(
         <>
          
-            <Link to={link}>
+            <Link to={link} target="_blank">
                 <ContentButton>{label}</ContentButton>
             </Link>
           

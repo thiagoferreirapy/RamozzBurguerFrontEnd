@@ -33,7 +33,7 @@ const Input = styled.input`
     }
 `
 
-const MultiInputCode = ({ numInputs = 6 }) => {
+const MultiInputCode = ({ numInputs , onCodeChange}) => {
   const [codes, setCodes] = useState(Array(numInputs).fill(''));
 
   const handleCodeChange = (index, value) => {
@@ -45,6 +45,9 @@ const MultiInputCode = ({ numInputs = 6 }) => {
     if (index < numInputs - 1 && value !== '') {
       document.getElementById(`codeInput${index + 1}`).focus();
     }
+
+    // Atualiza o código no componente pai
+    onCodeChange(newCodes.join(''));
   };
 
   return (

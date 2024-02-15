@@ -24,6 +24,7 @@ export default function RegisterModal(){
     setEtapaAtual(1);
   };
 
+    
   
   const [dadosPessoais, setDadosPessoais] = useState({ nome: '', email: '' });
   const [etapaAtual, setEtapaAtual] = useState(1); // 1 para dados pessoais, 2 para senha
@@ -85,7 +86,7 @@ export default function RegisterModal(){
 
   return (
     <div>
-      <ActiveModal onClick={abrirModal}>ENTRE OU CADASTRE-SE</ActiveModal>
+      <ActiveModal onClick={abrirModal}>Cadastre-se</ActiveModal>
 
       <Modal
         isOpen={modalAberto}
@@ -130,7 +131,7 @@ export default function RegisterModal(){
                 </ContentForm>
                 <ContentRegisterRoute>
                     <Text>ou</Text>
-                    <Text>Já possui uma conta? <strong><Link>Login!</Link></strong></Text>   
+                    <Text>Já possui uma conta? <strong><Link onClick={fecharModal}>Login!</Link></strong></Text>   
                 </ContentRegisterRoute>
             </ContentModalForm>
           

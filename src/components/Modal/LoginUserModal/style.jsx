@@ -77,6 +77,15 @@ export const Text = styled.p`
     color: ${(props) => props.theme.colors.gray};
     margin: 5px;
 `;
+export const TextRegister = styled.p`
+    font-size: 14px;
+    font-weight: 500;
+    color: ${(props) => props.theme.colors.gray};
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
 export const Link = styled.a`
     font-size: 14px;

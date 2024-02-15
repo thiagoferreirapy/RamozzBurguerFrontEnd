@@ -42,10 +42,10 @@ export const ContentTitleModal = styled.div`
 
 
 export const ActiveModal = styled.a`
-    margin-left: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffff;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: ${(props) => props.theme.colors.black};
     text-decoration: none;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
@@ -53,7 +53,7 @@ export const ActiveModal = styled.a`
     &:hover{
         color: #365C32;
         font-weight: 600;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #131313;
     }
 `;
 

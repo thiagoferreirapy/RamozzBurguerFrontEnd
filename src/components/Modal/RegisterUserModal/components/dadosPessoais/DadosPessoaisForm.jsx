@@ -58,6 +58,7 @@ export default function DadosPessoaisForm({ dados, onSubmit, onChange, onChangeE
         setMsgEmailError('');
       } else {
         setIsEmailValid(false);
+        setMsgNameError('');
         setMsgEmailError('E-mail já cadastrado');
       }
       
@@ -68,7 +69,7 @@ export default function DadosPessoaisForm({ dados, onSubmit, onChange, onChangeE
   };
 
   const verify = () =>{
-    return {'status': 403, 'message': 'E-mail já cadastrado'}
+    return {'status': 200, 'message': 'E-mail já cadastrado'}
   }
 
   // onSubmit={(e) => { e.preventDefault(); onSubmit(); }}

@@ -19,7 +19,7 @@ export default function Home() {
     
     return (
         <Main>
-            <Header/>
+            <Header currentPage="home"/>
             <ContainerInicial>
                 <ContentTitle>
                     <ImageLogo src={logo} />

@@ -13,7 +13,7 @@ export default function Sobre() {
     
     return (
         <Main>
-            <Header/>
+            <Header currentPage="sobre"/>
 
             <ContainerInicial>
                 <ContentTitle>
