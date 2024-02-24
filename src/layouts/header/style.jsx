@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.section`
     background-color: ${(props) => (props.isScrolled ? '#1a1a1a83' : 'transparent')};
-    width: 1500px;
+    max-width: 1500px;
+    width: 100%;
     height: 140px;
     padding: 15px 50px;
     display: flex;

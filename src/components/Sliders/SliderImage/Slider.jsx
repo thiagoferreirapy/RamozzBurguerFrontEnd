@@ -29,8 +29,8 @@ export default function Slider (){
         navigation
         pagination={{ clickable: true }}
         style={{
-          '--swiper-pagination-color': '#fff',
-          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#ffffff9d',
+          '--swiper-navigation-color': '#ffffff9d',
         }}
         effect='fade'
         autoplay={{

@@ -1,6 +1,4 @@
-
-import ImageBurguer from '../ImageBurguer'
-import {TextTitle, Title, SubTitle, ContentSliderImage, ContainerImagesGalery, ContentImages, DivImg, Image } from './style'
+import {TextTitle, Title, SubTitle, ContentSliderImage, ContainerImagesGalery, ContentImages, DivImg, Image, ContainerImagesGaleryConvert } from './style'
 import imgburguer1 from '../../images/ImagesGalery/imageBurguer1.svg'
 import imgburguer2 from '../../images/ImagesGalery/imageBurguer2.svg'
 import imgburguer3 from '../../images/ImagesGalery/imageBurguer3.svg'
@@ -10,8 +8,10 @@ import imgburguer6 from '../../images/ImagesGalery/imageBurguer6.svg'
 import imgburguer7 from '../../images/ImagesGalery/imageBurguer7.svg'
 
 
+
 import 'swiper/swiper-bundle.css';
 import Slider from '../Sliders/SliderImage/Slider'
+import SliderImages from '../Sliders/SliderImagesCount/SliderImages'
 
 export default function ContentGalery(){
     return (
@@ -42,6 +42,9 @@ export default function ContentGalery(){
                     <Image src={imgburguer7} altura={'380px'}/>
                     
                 </ContainerImagesGalery>
+                <ContainerImagesGaleryConvert>
+                    <SliderImages/>
+                </ContainerImagesGaleryConvert>
             </ContentSliderImage>
         </>
     )

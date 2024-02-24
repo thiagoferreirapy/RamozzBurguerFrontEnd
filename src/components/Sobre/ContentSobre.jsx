@@ -19,8 +19,10 @@ export default function ContentSobre(){
                 <Button label={'Saiba Mais'} link={'sobre'}/>
             </ContentTextInformation>
             <ContainerGalery>
+                <div>
                 <ImageBurguer src={imgburguer1}/>
                 <ImageBurguer src={imgburguer2} margintp="8px"/>
+                </div>
                 <ImageBurguer src={imgburguer3} marginlft="35px"/>
             </ContainerGalery>
             <ImageBackgroundBurguer src={backgroundBurguer}/>

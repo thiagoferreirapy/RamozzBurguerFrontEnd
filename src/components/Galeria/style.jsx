@@ -34,7 +34,18 @@ export const ContainerImagesGalery = styled.div`
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
-
+    @media (max-width: 1350px){
+        display: none;
+    }
+`
+export const ContainerImagesGaleryConvert = styled.div`
+    width: 100%;
+    column-count: 4;
+    display: none;
+    margin-top: 50px;
+    @media (max-width: 1350px){
+        display: flex;
+    }
 `
 
 export const ContentImages = styled.div`
@@ -58,4 +69,5 @@ export const Image = styled.img`
     height: ${(props) => (props.altura ? props.altura : 'auto')};
 
 `
+
 
