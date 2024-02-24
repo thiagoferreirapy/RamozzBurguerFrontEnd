@@ -1,8 +1,9 @@
+
 import axios from "axios";
 
-const getProducts = async () => {
+const creat_products = async (data) => {
   try {
-    const response = await axios.get(`http://127.0.0.1:800/todo_outer/products/`);
+    const response = await axios.post(`http://127.0.0.1:800/todo_outer/create_order/`, data);
     // console.log(response);
     return response;
   } catch (error) {
@@ -11,4 +12,4 @@ const getProducts = async () => {
   }
 };
 
-export default getProducts;
+export default creat_products;

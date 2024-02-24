@@ -20,11 +20,10 @@ const ContentButton = styled.button`
     }
 `
 
-export default function Button({label, link}){
+export default function Button({label, link, target}){
     return(
         <>
-         
-            <Link to={link} target="_blank">
+            <Link to={target ? link : '/' + link} target={target ? "_blank" : '_parent'}>
                 <ContentButton>{label}</ContentButton>
             </Link>
           

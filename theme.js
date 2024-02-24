@@ -11,13 +11,9 @@ const theme = {
       graySecondary: '#c4c7cc',
 
       blue: '#436FC8',
+      blueSecondary: '#F3F4F6',
+      blueTerciary: '#E7EAF1',
       danger: '#CB2D2D'
-    },
-    fontSizes: {
-      small: '14px',
-      medium: '16px',
-      large: '18px',
-      // Adicione mais tamanhos de fonte conforme necessário
-    },
+    }
   };
 export default theme

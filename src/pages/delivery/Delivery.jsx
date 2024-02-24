@@ -25,6 +25,9 @@ import {
   Products,
   SectionTitleProducts,
   SectionProducts,
+  ContentSelectCart,
+  ButtonSelectCart,
+  ContainerModalCart
 
 } from "./style";
 import ImageLogo from '../../components/ImageLogo';
@@ -35,6 +38,8 @@ import Search from './components/InputSearch/Search';
 import CardProduct from './components/cards/CardProduct';
 import getProducts from '../../service/api/Products';
 import getProductsCategory from '../../service/api/Productscategory';
+import PedidoModal from '../../components/Modal/PedidoModal/PedidoModal';
+import Cart from '../../components/CartModals/Cart';
 
 
 export default function Delivery() { 
@@ -43,6 +48,7 @@ export default function Delivery() {
     const [comboData, setComboData] = useState([]);
     const [bebidaData, setBebidaData] = useState([]);
     const [sobremesaData, setSobremesaData] = useState([]);
+    const [promotionData, setPromotionData] = useState([]);
 
     const handleClick = async () => {
         try {
@@ -99,13 +105,12 @@ export default function Delivery() {
       };
     
       useEffect(() => {
-        // Chama a função fetchDataBurguers apenas uma vez quando o componente monta
         fetchDataPorcao();
       }, []);
       const fetchDataBebida = async () => {
         try {
           const response = await getProductsCategory('Bebida');
-          // Atualiza o estado com os dados dos produtos
+          
           setBebidaData(response.data);
           
         } catch (error) {
@@ -114,7 +119,6 @@ export default function Delivery() {
       };
     
       useEffect(() => {
-        // Chama a função fetchDataBurguers apenas uma vez quando o componente monta
         fetchDataBebida();
       }, []);
       const fetchDataSobremesa = async () => {
@@ -129,10 +133,35 @@ export default function Delivery() {
       };
     
       useEffect(() => {
-        // Chama a função fetchDataBurguers apenas uma vez quando o componente monta
         fetchDataSobremesa();
       }, []);
 
+      const fetchDataPromotion = async () => {
+        try {
+          const response = await getProductsCategory('Promocao');
+          setPromotionData(response.data);
+          
+        } catch (error) {
+          console.error(error);
+        }
+      };
+    
+      useEffect(() => {
+        fetchDataPromotion();
+      }, []);
+
+      const [modalAberto, setModalAberto] = useState(false);
+      const [productInfo, setProductInfo] = useState(null);
+
+  const abrirModal = (productInfo) => {
+    setProductInfo(productInfo);
+    // console.log('teste',productInfo, 'teste')
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+  };
 
     return (
         <Main>
@@ -144,8 +173,7 @@ export default function Delivery() {
                     <br/><br/><br/>
                     <TextTitle>Deivery em funcionamento até as 22h</TextTitle>
                     <ContentButtons>
-                        <Button label={'Fale Conosco'} link={'https://web.whatsapp.com/send?phone=5561994162084'}/>
-                        <button onClick={handleClick}>teste</button>
+                        <Button label={'Fale Conosco'} link={'https://web.whatsapp.com/send?phone=5561994162084'} target={true}/>
                     </ContentButtons>
                 </ContentTitle>
             </ContainerInicial>
@@ -169,93 +197,139 @@ export default function Delivery() {
                        </ContentSelectSearch>
                        <Products>
                             <SectionTitleProducts>Promoção</SectionTitleProducts>
-                            <SectionProducts>
-                            {burgersData.map(product => (
+                            <SectionProducts  name='promocao'>
+                            {promotionData.map(product => (
                                 <CardProduct
-                                key={product.id} // Certifique-se de ter uma chave única para cada CardProduct
-                                productName={product.name_product} // Substitua 'productName' pelos nomes reais dos campos do produto
+                                key={product.id_product}
+                                productId={product.id_product} 
+                                productName={product.name_product} 
                                 productDescription={product.description}
                                 productValue={product.value}
+                                productValuePromotion={product.value_promotion}
                                 productImage={product.image}
+                                abrirModal={abrirModal}
+                                category={product.category}
+                                typecard={'promocao'}
                                 />
                             ))}
 
                             </SectionProducts>
 
-                            <SectionTitleProducts>BURGUERS DELICIOSOS</SectionTitleProducts>
-                            <SectionProducts>
+                            <SectionTitleProducts >BURGUERS DELICIOSOS</SectionTitleProducts>
+                            <SectionProducts name='burguer'>
                             {burgersData.map(product => (
                                 <CardProduct
-                                key={product.id} // Certifique-se de ter uma chave única para cada CardProduct
-                                productName={product.name_product} // Substitua 'productName' pelos nomes reais dos campos do produto
+                                key={product.id_product} 
+                                productId={product.id_product} 
+                                productName={product.name_product} 
                                 productDescription={product.description}
                                 productValue={product.value}
+                                productValuePromotion={product.value_promotion}
                                 productImage={product.image}
+                                category={product.category}
+                                abrirModal={abrirModal}
+                                
                                 />
+
+                                
                             ))}
+                            
+                            
 
                             </SectionProducts>
-                            <SectionTitleProducts>COMBOS PROMOCIONAIS</SectionTitleProducts>
+
+                            <SectionTitleProducts name='combo'>COMBOS PROMOCIONAIS</SectionTitleProducts>
                             <SectionProducts>
                             {comboData.map(product => (
                                 <CardProduct
-                                key={product.id} // Certifique-se de ter uma chave única para cada CardProduct
-                                productName={product.name_product} // Substitua 'productName' pelos nomes reais dos campos do produto
+                                key={product.id_product}
+                                productId={product.id_product} 
+                                productName={product.name_product} 
                                 productDescription={product.description}
                                 productValue={product.value}
+                                productValuePromotion={product.value_promotion}
                                 productImage={product.image}
+                                category={product.category}
+                                abrirModal={abrirModal}
                                 />
                             ))}
 
 
                             </SectionProducts>
-                            <SectionTitleProducts>PORÇÕES SUCULENTAS</SectionTitleProducts>
+
+                            <SectionTitleProducts name='porcao'>PORÇÕES SUCULENTAS</SectionTitleProducts>
                             <SectionProducts>
                             {porcaoData.map(product => (
                                 <CardProduct
-                                key={product.id} // Certifique-se de ter uma chave única para cada CardProduct
+                                key={product.id_product}
+                                productId={product.id_product} // Certifique-se de ter uma chave única para cada CardProduct
                                 productName={product.name_product} // Substitua 'productName' pelos nomes reais dos campos do produto
                                 productDescription={product.description}
                                 productValue={product.value}
+                                productValuePromotion={product.value_promotion}
                                 productImage={product.image}
+                                abrirModal={abrirModal}
+                                category={product.category}
+                                typecard={'cardmin'}
                                 />
                             ))}
 
 
                             </SectionProducts>
-                            <SectionTitleProducts>UMA BEBIDA PARA REFRESCAR?</SectionTitleProducts>
+
+                            <SectionTitleProducts name='bebida'>UMA BEBIDA PARA REFRESCAR?</SectionTitleProducts>
                             <SectionProducts>
                             {bebidaData.map(product => (
                                 <CardProduct
-                                key={product.id} // Certifique-se de ter uma chave única para cada CardProduct
+                                key={product.id_product}
+                                productId={product.id_product} // Certifique-se de ter uma chave única para cada CardProduct
                                 productName={product.name_product} // Substitua 'productName' pelos nomes reais dos campos do produto
                                 productDescription={product.description}
                                 productValue={product.value}
+                                productValuePromotion={product.value_promotion}
                                 productImage={product.image}
+                                abrirModal={abrirModal}
+                                category={product.category}
+                                typecard={'cardmin'}
                                 />
                             ))}
 
 
                             </SectionProducts>
-                            <SectionTitleProducts>VAI UMA SOBREMESA AÍ</SectionTitleProducts>
+                              
+                            <SectionTitleProducts name='sobremesa'>VAI UMA SOBREMESA AÍ</SectionTitleProducts>
                             <SectionProducts>
                             {sobremesaData.map(product => (
                                 <CardProduct
-                                key={product.id} // Certifique-se de ter uma chave única para cada CardProduct
+                                key={product.id_product}
+                                productId={product.id_product} // Certifique-se de ter uma chave única para cada CardProduct
                                 productName={product.name_product} // Substitua 'productName' pelos nomes reais dos campos do produto
                                 productDescription={product.description}
                                 productValue={product.value}
+                                productValuePromotion={product.value_promotion}
                                 productImage={product.image}
+                                abrirModal={abrirModal}
+                                category={product.category}
+                                typecard={'cardmin'}
                                 />
                             ))}
 
 
                             </SectionProducts>
+                            <PedidoModal isOpen={modalAberto} onRequestClose={fecharModal} productInfo={productInfo}/>
                        </Products>
                     </ContentSelectProducts>
                 </ContentProducts>
-                <ContentCart>
 
+                <ContentCart>
+                  <ContentSelectCart>
+                    <ButtonSelectCart>Promoções</ButtonSelectCart>
+                    <ButtonSelectCart>Sacola</ButtonSelectCart>
+                  </ContentSelectCart>
+
+                  <ContainerModalCart>
+                    <Cart/>
+                  </ContainerModalCart>
                 </ContentCart>
             </ContainerProducts>
         </Main>

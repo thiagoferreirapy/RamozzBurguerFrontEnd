@@ -15,8 +15,10 @@ import Footer from './layouts/footer/Footer';
 import Sobre from './pages/sobre/Sobre'
 import Cardapio from './pages/cardapio/Cardapio.jsx';
 import Delivery from './pages/delivery/Delivery.jsx';
+import Modal from 'react-modal';
 
 
+Modal.setAppElement('#root');
 function App() {
   return (
     <ThemeProvider theme={theme}>

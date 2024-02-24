@@ -4,7 +4,7 @@ import background from '../../images/background2.svg'
 export const Main = styled.main`
     width: 100%;
     margin-bottom: 150px;
-    background-color: #fafafa;
+    background-color: #f4f5f7;
 `;
 
 export const ContainerInicial = styled.div`
@@ -145,9 +145,41 @@ export const SectionProducts = styled.div`
 
 export const ContentCart = styled.div`
     width: 440px;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+`
+
+export const ContentSelectCart = styled.div`
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ff00d4;
+    background-color: ${(props) => props.theme.colors.white};
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #0000001d;
+`
+export const ButtonSelectCart = styled.button`
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${(props) => props.theme.colors.black};
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s all linear;
+    text-transform: uppercase;
+    &:hover{
+        color: ${(props) => props.theme.colors.green};
+    }
+`
+export const ContainerModalCart = styled.div`
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    background: none;
+
 `

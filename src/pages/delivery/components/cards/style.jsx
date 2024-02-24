@@ -3,7 +3,15 @@ import styled from 'styled-components'
 
 export const Card = styled.div`
     width: 370px;
-    height: 160px;
+    /* height: 160px; */
+    height: ${(props) => {
+    switch (props.typecard) {
+      case 'cardmin':
+        return '130px'; // Altura desejada para 'porcao'
+      default:
+        return '160px'; // Altura padrão para outros tipos
+    }
+  }};
     padding: 15px;
     border-radius: 10px;
     border: 1px solid ${(props) => props.theme.colors.graySecondary};
@@ -45,11 +53,24 @@ export const Value = styled.p`
     margin-top: 10px;
     position: absolute;
     bottom: 10px;
+
+    span{
+        color: ${(props) => props.theme.colors.gray};
+        text-decoration: line-through;
+    }
 `;
 
 export const ImgBurguer = styled.img`
     width: 100px;
-    height: 130px;
+    /* height: 130px; */
     object-fit: cover;
     border-radius: 10px;
+    height: ${(props) => {
+    switch (props.typecard) {
+      case 'cardmin':
+        return '100px'; // Altura desejada para 'porcao'
+      default:
+        return '130px'; // Altura padrão para outros tipos
+    }
+  }};
 `;
