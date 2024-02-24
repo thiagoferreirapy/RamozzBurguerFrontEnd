@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Logo = styled.img`
     width: auto;
+
 `
 
 export default function ImageLogo({src}){

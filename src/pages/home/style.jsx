@@ -22,6 +22,15 @@ export const ContainerInicial = styled.div`
     max-width: 1500px;
     width: 100vw;
 
+    @media (max-width: 800px), (landscape){
+        height: 800px;
+    }
+    @media (max-width: 700px){
+        height: 700px;
+    }
+    @media (max-width: 500px){
+        height: 500px;
+    }
     @media (max-width: 350px){
         height: 600px;
     }
@@ -70,7 +79,7 @@ export const SubTitle = styled.h2`
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-
+    margin-bottom: 50px;
     @media (max-width: 650px){
         font-size: 24px;
     }
@@ -100,9 +109,7 @@ export const ContentButtonLink = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
-    bottom: 100px;
-
+    
     @media (max-width: 350px){
         bottom: -30px;
         
