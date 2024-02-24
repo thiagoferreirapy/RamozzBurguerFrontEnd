@@ -25,13 +25,13 @@ export const ContainerInicial = styled.div`
     @media (max-width: 800px), (landscape){
         height: 800px;
     }
-    @media (max-width: 700px){
+    @media (max-width: 700px), (landscape){
         height: 700px;
     }
-    @media (max-width: 500px){
+    @media (max-width: 500px), (landscape){
         height: 500px;
     }
-    @media (max-width: 350px){
+    @media (max-width: 350px), (landscape){
         height: 600px;
     }
 `;
