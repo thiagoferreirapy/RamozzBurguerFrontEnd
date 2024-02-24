@@ -5,6 +5,11 @@ import background from '../../images/background2.svg'
 export const Main = styled.main`
     max-width: 1500px;
     width: 100vw;
+
+    /* @media (max-width: 900px) and (orientation: landscape){
+        
+        background-color: red;  
+    } */
 `;
 
 
@@ -22,17 +27,21 @@ export const ContainerInicial = styled.div`
     max-width: 1500px;
     width: 100vw;
 
-    @media (max-width: 800px), (landscape){
-        height: 800px;
+    @media (max-width: 900px) and (orientation: landscape){
+        height: 800px; 
+         
     }
-    @media (max-width: 700px), (landscape){
-        height: 700px;
+    @media (max-width: 700px) and (orientation: landscape){
+        height: 700px; 
+        background-color: red;              
     }
-    @media (max-width: 500px), (landscape){
+    @media (max-width: 500px) and (orientation: landscape){
         height: 500px;
+        
     }
-    @media (max-width: 350px), (landscape){
+    @media (max-width: 350px) and (orientation: landscape){
         height: 600px;
+        
     }
 `;
 
