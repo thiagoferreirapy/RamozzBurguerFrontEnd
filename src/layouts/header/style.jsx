@@ -12,21 +12,27 @@ export const HeaderContainer = styled.section`
     position: absolute;
     top: 0;
     z-index: 2;
+    /* background-color: blue; */
 `;
 
-export const ImgLogo = styled.img`
-    width: 90px;
-    margin-right: 140px;
+export const ContentPosition = styled.div`
+    position: relative;
+    /* ${({ posicao }) => posicao === 'left' ? 'left: 100px;' : 'right: 100px;'} */
+    /* background-color: green; */
 `;
+
 
 export const MenuBar = styled.div`
+    width: 500px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     text-decoration: none;
+    /* background-color: red; */
 `;
 
 export const Links = styled(Link)`
-    margin-left: 50px;
+    /* margin-left: 50px; */
     font-size: 16px;
     font-weight: 600;
     color: #ffff;
@@ -34,7 +40,7 @@ export const Links = styled(Link)`
     cursor: pointer;
     transition: 0.3s all ease-in-out;
     border-bottom: 2px solid transparent;
-
+    /* background-color: yellow; */
     
     &:hover{
         color: #365C32;

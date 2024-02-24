@@ -35,9 +35,7 @@ export default function Footer(){
                         <Links to={'/'}>Home</Links>
                         <Links to={'/sobre'}>Quem Somos</Links>
                         <Links to={'/cardapio'}>Cardápio</Links>
-                        <Links to={'/'}>Delivery</Links>
-                        <Links to={'/'}>Orçamentos</Links>
-                        <Links to={'/'}>Contato</Links>
+                        <Links to={'https://web.whatsapp.com/send?phone=5561994162084'} target='blank'>Orçamentos</Links>
                     </ContentAlingText>
                 </ContentLinksInstitucional>
 
@@ -50,20 +48,22 @@ export default function Footer(){
                         </ContentIconsTextAlign>
                         <ContentIconsTextAlign>
                             <ImgIcon src={phone}/>
-                            <TextNormal>(11) 994162084</TextNormal>
+                            <TextNormal><Links>(11) 994162084</Links></TextNormal>
                         </ContentIconsTextAlign>
                         <ContentIconsTextAlign>
                             <ImgIcon src={whats}/>
-                            <TextNormal>(11) 994162084</TextNormal>
+                            <TextNormal><Links>(11) 994162084</Links></TextNormal>
                         </ContentIconsTextAlign>
 
                         <ContentRedesSociais>
                             <SubTitle>Siga as nossas redes sociais</SubTitle>
                             <RedesSociais>
-                                <ImgIconRedes src={instagram}/>
-                                <ImgIconRedes src={facebook}/>
-                                <ImgIconRedes src={tiktok}/>
-                                <ImgIconRedes src={pinterest}/>
+                                <Link to={'https://www.instagram.com/thiagosferreira__/'} target='blank'><ImgIconRedes src={instagram}/></Link>
+                                <Link to={'https://www.facebook.com/?locale=pt_BR'} target='blank'><ImgIconRedes src={facebook}/></Link>
+                                <Link to={'https://www.tiktok.com/search?q=restaurante%20em%20sp&t=1706973243598'} target='blank'><ImgIconRedes src={tiktok}/></Link>
+                                <Link to={'https://br.pinterest.com/'} target='blank'><ImgIconRedes src={pinterest}/></Link>
+                                
+                                
                             </RedesSociais>
                         </ContentRedesSociais>
                     </ContentAling>
