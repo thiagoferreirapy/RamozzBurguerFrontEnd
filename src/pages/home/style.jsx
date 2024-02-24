@@ -32,11 +32,11 @@ export const ContainerInicial = styled.div`
          
     }
     @media (max-width: 700px) and (orientation: landscape){
-        height: 700px; 
+        height: 800px; 
         background-color: red;              
     }
     @media (max-width: 500px) and (orientation: landscape){
-        height: 500px;
+        height: 600px;
         
     }
     @media (max-width: 350px) and (orientation: landscape){
@@ -54,6 +54,7 @@ export const ContentTitle = styled.div`
 `
 
 export const Title = styled.h1`
+    color: ${(props) => props.theme.colors.white};;
     font-size: 100px;
     font-family: 'Road Rage';
     font-weight: 400;
@@ -85,6 +86,7 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.h2`
+    color: ${(props) => props.theme.colors.white};
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;

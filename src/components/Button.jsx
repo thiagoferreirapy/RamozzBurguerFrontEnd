@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ContentButton = styled.button`
+    text-decoration: none;
+    color: #fff;
     width: 230px;
     height: 45px;
     border: none;
