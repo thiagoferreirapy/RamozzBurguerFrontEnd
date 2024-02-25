@@ -29,18 +29,23 @@ export const ContainerInicial = styled.div`
 
     @media (max-width: 900px) and (orientation: landscape){
         height: 800px; 
-         
+        background-color: red;   
     }
     @media (max-width: 700px) and (orientation: landscape){
         height: 800px; 
         background-color: red;              
     }
     @media (max-width: 500px) and (orientation: landscape){
-        height: 600px;
+        height: 800px;
         
     }
     @media (max-width: 350px) and (orientation: landscape){
-        height: 600px;
+        height: 800px;
+        
+    }
+
+    @media (max-width: 380px){
+        height: 800px;
         
     }
 `;
