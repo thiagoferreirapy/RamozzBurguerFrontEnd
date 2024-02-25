@@ -6,7 +6,7 @@ export const Main = styled.main`
     max-width: 1500px;
     width: 100vw;
 
-    @media (max-width: 900px) and (orientation: landscape){
+    @media (max-width: 1100px) and (orientation: landscape){
         
         background-color: red;  
     }
@@ -27,6 +27,10 @@ export const ContainerInicial = styled.div`
     max-width: 1500px;
     width: 100vw;
 
+    @media (max-width: 1100px) and (orientation: landscape){
+        height: 850px; 
+        background-color: red;   
+    }
     @media (max-width: 900px) and (orientation: landscape){
         height: 800px; 
         background-color: red;   
