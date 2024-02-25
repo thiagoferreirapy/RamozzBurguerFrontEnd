@@ -12,7 +12,7 @@ export const alturaMobile = keyframes`
 `;
 
 export const MenuMobile = styled.section`
-    background-color: ${(props) => (props.menuAberto == true ? '#202021' : 'transparent')};
+    background-color: ${(props) => (props.menuAberto == true ? '#202021' : '#202021dd')};
     width: 100%;
     height: ${(props) => (props.menuAberto == true ? '100%' : '140px')};
     display: none;
@@ -34,6 +34,7 @@ export const MenuMobile = styled.section`
 
 
 export const ContentmenuMobile = styled.div`
+    background-color: ${(props) => (props.menuAberto == true ? '#202021' : '#202021e8')};
     max-width: 1500px;
     width: 100%;
     height: 140px;
