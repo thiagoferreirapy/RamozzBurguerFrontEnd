@@ -19,16 +19,19 @@ const HamburguerMenu = styled.div`
 
   ${(props) => props.menuAberto && `
     span:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
+      transform: rotate(-45deg) translate(-5px, 7px);
+      background-color: #ffffff;
     }
 
     span:nth-child(2) {
       transform: translateX(-100%);
       opacity: 0;
+      
     }
 
     span:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
+      transform: rotate(45deg) translate(-5px, -7px);
+      background-color: #ffffff;
     }
   `}
 `;
