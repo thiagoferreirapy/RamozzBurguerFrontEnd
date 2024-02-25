@@ -52,7 +52,7 @@ export default function Header({ currentPage }){
     useEffect(() => {
         const handleScroll = () => {
           // Fecha o menu apenas quando o scroll ultrapassar 300 pixels em modo paisagem
-          if (menuAberto && isPaisagem && window.scrollY > 150) {
+          if (menuAberto && isPaisagem && window.scrollY > 170) {
             setMenuAberto(false);
           }else if(menuAberto && !isPaisagem){
             setMenuAberto(false);
@@ -92,13 +92,13 @@ export default function Header({ currentPage }){
                   {/* Renderize o componente LoginModal e passe as funções de abrir e fechar modal como propriedades */}
                   {/* <LoginModal isOpen={modalAberto} onRequestClose={fecharModal} /> */}
               </MenuBar>
-              <ContentPosition posicao="rigth">
+              <ContentPosition >
                 <ButtonIfood label={'peça pelo Ifood'} link={'https://www.ifood.com.br/'} target={'blank'}/> 
 
                 </ContentPosition>
           </HeaderContainer>
           <MenuMobile menuAberto={menuAberto}>
-              <ContentmenuMobile posicao="left">
+              <ContentmenuMobile>
                 <ImageLogo src={logo}/>
                 <MenuToggle onToggle={toggleModal} />
               </ContentmenuMobile>

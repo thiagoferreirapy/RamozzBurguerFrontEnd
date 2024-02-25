@@ -48,7 +48,7 @@ export default function MenuToggle({ onToggle }){
     useEffect(() => {
         const handleScroll = () => {
           // Fecha o menu apenas quando o scroll ultrapassar 300 pixels em modo paisagem
-          if (menuAberto && isPaisagem && window.scrollY > 150) {
+          if (menuAberto && isPaisagem && window.scrollY > 170) {
             setMenuAberto(false);
           }else if(menuAberto && !isPaisagem){
             setMenuAberto(false);
