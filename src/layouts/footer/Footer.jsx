@@ -40,8 +40,8 @@ export default function Footer(){
                 </ContentLinksInstitucional>
 
                 <ContentContato>
-                    <ContentAling>
-                        <SubTitle>Institucional</SubTitle>
+                <ContentAling>
+                        <SubTitle>Contatos</SubTitle>
                         <ContentIconsTextAlign>
                             <ImgIcon src={loc}/>
                             <TextNormal>Rua Artur de Azevedo, 898 Pinheiros, São Paulo/SP</TextNormal>
@@ -74,11 +74,11 @@ export default function Footer(){
                 
                 <ContentIconsTextAlign>
                     <TextNormal>Hamburgueria RAMOZZ BURGUERS 2023 - Todos os direitos reservados</TextNormal>
-                </ContentIconsTextAlign>
-                <ContentIconsTextAlign>
-                    <TextLink>Termos de uso</TextLink>
-                    <TextNormal>|</TextNormal>
-                    <TextLink>Políticas de Privacidade</TextLink>
+                    </ContentIconsTextAlign>
+                    <ContentIconsTextAlign>
+                        <TextLink>Termos de uso</TextLink>
+                        <TextNormal>|</TextNormal>
+                        <TextLink>Políticas de Privacidade</TextLink>
                 </ContentIconsTextAlign>
             </ContentDirectedFooter>
         </FooterContainer>
