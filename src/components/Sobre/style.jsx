@@ -113,7 +113,7 @@ export const Text = styled.p`
         width: 450px;
     }
     @media (max-width: 490px){
-        width: 400px;
+        width: 380px;
     }
 
     @media (max-width: 391px){
