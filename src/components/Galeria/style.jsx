@@ -6,6 +6,22 @@ export const TextTitle = styled.p`
     font-size: 30px;
     font-weight: 900;
     text-transform: uppercase;
+
+    @media (max-width: 500px){
+        font-size: 25px;
+    }
+
+    @media (max-width: 490px){
+        font-size: 20px;
+    }
+
+    @media (max-width: 380px){
+        font-size: 18px;
+    }
+
+    @media (max-width: 350px){
+        font-size: 16px;
+    }
     
 `
 export const Title = styled.h1`
@@ -14,6 +30,22 @@ export const Title = styled.h1`
     font-weight: 900;
     text-transform: uppercase;
 
+    @media (max-width: 600px){
+        font-size: 40px;
+    }
+    @media (max-width: 500px){
+        font-size: 35px;
+    }
+    @media (max-width: 490px){
+        font-size: 30px;
+    }
+    @media (max-width: 380px){
+        font-size: 25px;
+    }
+    @media (max-width: 350px){
+        font-size: 20px;
+    }
+
 `
 export const SubTitle = styled.h2`
     color: ${(props) => props.theme.colors.white};
@@ -21,6 +53,19 @@ export const SubTitle = styled.h2`
     font-weight: 900;
     text-transform: uppercase;
 
+    @media (max-width: 500px){
+        font-size: 25px;
+    }
+    @media (max-width: 490px){
+        font-size: 20px;
+    }
+    @media (max-width: 380px){
+        font-size: 18px;
+    }
+
+    @media (max-width: 350px){
+        font-size: 16px;
+    }
 `
 
 export const ContentSliderImage = styled.div`

@@ -6,10 +6,6 @@ export const Main = styled.main`
     max-width: 1500px;
     width: 100vw;
 
-    @media (max-width: 1100px) and (orientation: landscape){
-        
-        background-color: red;  
-    }
 `;
 
 
@@ -28,16 +24,13 @@ export const ContainerInicial = styled.div`
     width: 100vw;
 
     @media (max-width: 1100px) and (orientation: landscape){
-        height: 850px; 
-        background-color: red;   
+        height: 800px;  
     }
     @media (max-width: 900px) and (orientation: landscape){
-        height: 800px; 
-        background-color: red;   
+        height: 800px;  
     }
     @media (max-width: 700px) and (orientation: landscape){
-        height: 800px; 
-        background-color: red;              
+        height: 800px;             
     }
     @media (max-width: 500px) and (orientation: landscape){
         height: 800px;
@@ -215,4 +208,16 @@ export const ContainerOrcamento = styled.section`
     align-items: center;
     justify-content: center;
     padding: 50px 30px;
+
+    /* @media (max-width: 1150px){
+        background-color: red;
+    }
+    @media (max-width: 1100px){
+        background-color: #3cff00;
+    } */
+    @media (max-width: 900px){
+        flex-direction: column;
+        justify-content: space-around;
+        height: 1000px;
+    }
 `
