@@ -38,7 +38,7 @@ export const ContentmenuMobile = styled.div`
     max-width: 1500px;
     width: 100%;
     height: 140px;
-    padding: 15px 50px;
+    padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;

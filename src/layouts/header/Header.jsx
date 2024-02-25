@@ -8,6 +8,7 @@ import ImageLogo from '../../components/ImageLogo';
 import LoginModal from '../../components/Modal/LoginUserModal/LoginModal';
 import RegisterModal from '../../components/Modal/RegisterUserModal/RegisterModal';
 import ButtonIfood from '../../components/ButtonIfood';
+import MenuToggle from '../../components/MenuToggle';
 
 
 export default function Header({ currentPage }){
@@ -38,12 +39,8 @@ export default function Header({ currentPage }){
 
   const [menuAberto, setMenuAberto] = useState(false);
 
-  const abrirMenu = () => {
-    setMenuAberto(true);
-  };
-  
-  const fecharMenu = () => {
-    setMenuAberto(false);
+  const toggleModal = () => {
+    setMenuAberto(!menuAberto);
   };
 
     return (
@@ -72,7 +69,7 @@ export default function Header({ currentPage }){
           <MenuMobile menuAberto={menuAberto}>
               <ContentmenuMobile posicao="left">
                 <ImageLogo src={logo}/>
-                <button onClick={abrirMenu}>X</button>
+                <MenuToggle onToggle={toggleModal} />
               </ContentmenuMobile>
               <MenuBarMobile menuAberto={menuAberto}>
                 <ContentSpaceMenu>
