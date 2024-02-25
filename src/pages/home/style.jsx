@@ -6,10 +6,10 @@ export const Main = styled.main`
     max-width: 1500px;
     width: 100vw;
 
-    /* @media (max-width: 900px) and (orientation: landscape){
+    @media (max-width: 900px) and (orientation: landscape){
         
         background-color: red;  
-    } */
+    }
 `;
 
 
