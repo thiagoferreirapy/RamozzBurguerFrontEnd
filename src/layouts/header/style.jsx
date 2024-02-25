@@ -17,7 +17,8 @@ export const MenuMobile = styled.section`
     height: ${(props) => (props.menuAberto == true ? '100%' : '140px')};
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: ${(props) => (props.menuAberto == true ? 'fixed' : 'absolute')};
+    
     top: 0;
     z-index: 2;
     transition: 0.5s all linear;

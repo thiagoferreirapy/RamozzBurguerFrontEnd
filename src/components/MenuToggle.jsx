@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const HamburguerMenu = styled.div`
@@ -43,6 +43,20 @@ export default function MenuToggle({ onToggle }){
       setMenuAberto(!menuAberto);
       onToggle(); // Adicione esta linha para chamar a função onToggle do componente pai
     };
+
+    useEffect(() => {
+        // Adiciona uma classe ao body para desabilitar o scroll ao abrir o modal
+        if (menuAberto) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+    
+        // Remove a classe ao desmontar o componente ou fechar o modal
+        return () => {
+          document.body.style.overflow = 'auto';
+        };
+      }, [menuAberto]);
 
   return (
     <HamburguerMenu menuAberto={menuAberto} onClick={toggleMenu}>
