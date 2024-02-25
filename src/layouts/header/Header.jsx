@@ -43,6 +43,37 @@ export default function Header({ currentPage }){
     setMenuAberto(!menuAberto);
   };
 
+  const [isPaisagem, setIsPaisagem] = useState(window.matchMedia('(orientation: landscape)').matches);
+    const toggleMenu = () => {
+      setMenuAberto(!menuAberto);
+      onToggle(); // Adicione esta linha para chamar a função onToggle do componente pai
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+          // Fecha o menu apenas quando o scroll ultrapassar 300 pixels em modo paisagem
+          if (menuAberto && isPaisagem && window.scrollY > 150) {
+            setMenuAberto(false);
+          }else if(menuAberto && !isPaisagem){
+            setMenuAberto(false);
+          }
+        };
+    
+        const handleOrientationChange = () => {
+          setIsPaisagem(window.matchMedia('(orientation: landscape)').matches);
+        };
+    
+        // Adiciona ouvintes de eventos
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('orientationchange', handleOrientationChange);
+    
+        // Remove ouvintes de eventos ao desmontar o componente
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+          window.removeEventListener('orientationchange', handleOrientationChange);
+        };
+      }, [menuAberto, isPaisagem]);
+
     return (
         <>
             <HeaderContainer isScrolled={isScrolled}>

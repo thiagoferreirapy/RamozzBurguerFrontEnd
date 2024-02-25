@@ -52,7 +52,7 @@ export const MenuBarMobile = styled.div`
     background-color: transparent;
     width: 100%;
     height: 60%;
-    padding: 15px 50px;
+    
     
     ${(props) => (props.menuAberto === true ? 'display: flex;' : 'display: none;')};
     flex-direction: column;
@@ -60,6 +60,11 @@ export const MenuBarMobile = styled.div`
     justify-content: space-between;
     margin-top: 40px;
     font-size: 50px;
+
+    @media (max-width: 850px) and (orientation: landscape){
+        margin-top: 0px;
+        padding: 0px 50px;
+    }
     
 `;
 
