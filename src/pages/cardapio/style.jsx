@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import background from '../../images/background2.svg'
 
 export const Main = styled.main`
-    width: 100%;
+    width: 100vw;
     margin-bottom: 150px;
 `;
 
@@ -17,6 +17,11 @@ export const ContainerInicial = styled.div`
     justify-content: center;
     /* filter: brightness(0.9) grayscale(0.5); */
     height: 90vh;
+    width: 100%;
+
+    @media (max-width: 650px){
+        height: 850px;
+    }
 `;
 
 export const ContentTitle = styled.div`
@@ -35,6 +40,14 @@ export const Title = styled.h1`
     line-height: 40px;
     text-transform: uppercase;
     margin: 50px 0 30px;
+
+    @media (max-width: 650px){
+        font-size: 90px;
+    }
+    @media (max-width: 490px){
+        font-size: 70px;
+        margin: 50px 0 20px;
+    }
 `
 
 export const SubTitle = styled.h2`
@@ -42,10 +55,75 @@ export const SubTitle = styled.h2`
     font-weight: 700;
     text-transform: uppercase;
 
+    @media (max-width: 650px){
+        font-size: 25px;
+    }
+
+    @media (max-width: 550px){
+        font-size: 21px;
+    }
+    @media (max-width: 550px){
+        font-size: 21px;
+    }
+    @media (max-width: 490px){
+        font-size: 20px;
+    }
+    @media (max-width: 391px){
+        font-size: 18px;
+    }
+    @media (max-width: 360px){
+        font-size: 16px;
+    }
 `
 export const TextTitle = styled.p`
     font-size: 16px;
     font-weight: 600;
+
+    @media (max-width: 1050px){
+        width: 900px;
+        text-align: center;
+    }
+    @media (max-width: 900px){
+        width: 700px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    @media (max-width: 700px){
+        width: 550px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    @media (max-width: 650px){
+        width: 500px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    @media (max-width: 560px){
+        width: 400px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    @media (max-width: 475px){
+        width: 380px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    @media (max-width: 391px){
+        width: 340px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    @media (max-width: 360px){
+        width: 330px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    @media (max-width: 350px){
+        width: 300px;
+        text-align: center;
+        margin-top: 15px;
+    }
 
 `
 export const ContentButtons = styled.div`
@@ -54,6 +132,10 @@ export const ContentButtons = styled.div`
     align-items: center;
     justify-content: space-around;
     margin-top: 40px;
+    @media (max-width: 750px){
+        flex-direction: column;
+        height: 150px;
+    }
 `
 export const ContainerCardapio = styled.section`
     width: 100%;
@@ -96,6 +178,19 @@ export const ContentCardapioProducts = styled.div`
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
+
+        @media (max-width: 1150px){
+            width: 70%;
+        }
+        @media (max-width: 1000px){
+            width: 70%;
+        }
+        @media (max-width: 600px){
+            width: 80%;
+        }
+        @media (max-width: 400px){
+            width: 90%;
+        }
 `
 export const ContentTitleProducts = styled.div`
         width: 100%;

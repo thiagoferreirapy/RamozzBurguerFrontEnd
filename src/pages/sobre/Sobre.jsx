@@ -50,7 +50,7 @@ export default function Sobre() {
                   </ContentImages>
                 </ContentInformations>
                 <div style={{ marginTop: '30px', marginLeft: '90px' }}>
-                <Button label={'Peça Já!'} link={'delivery'}/>
+                <Button label={'Peça Já!'} link={'https://web.whatsapp.com/send?phone=5561994162084'} target={'blank'}/>
                 </div>
             </ContentInformationsSobre>
         </Main>

@@ -30,7 +30,7 @@ export default function Home() {
                 <br/>
                 <ContentButtonLink>
                     <Text>Delivery em funcionamento até as 22h</Text>
-                    <Button label={'PEÇA JÁ O SEU!'} link={'delivery'} />
+                    <Button label={'PEÇA JÁ O SEU!'} link={'https://web.whatsapp.com/send?phone=5561994162084'} target={"blank"}/>
                 </ContentButtonLink>
             </ContainerInicial>
             <ContainerSobre>
