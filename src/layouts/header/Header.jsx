@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { useScroll } from '../../service/ScrollContext';
 
-import  { HeaderContainer, Links, MenuBar, ContentPosition } from './style';
+import  { HeaderContainer, Links, MenuBar, ContentPosition, MenuMobile, ContentmenuMobile, MenuBarMobile, LinksMobile, ContentSpaceMenu } from './style';
 import logo from '../../images/logo.svg'
 import ImageLogo from '../../components/ImageLogo';
 import LoginModal from '../../components/Modal/LoginUserModal/LoginModal';
@@ -36,28 +36,53 @@ export default function Header({ currentPage }){
     setModalAberto(false);
   };
 
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const abrirMenu = () => {
+    setMenuAberto(true);
+  };
+  
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  };
 
     return (
-        <HeaderContainer isScrolled={isScrolled}>
-            <ContentPosition posicao="left">
-              <ImageLogo src={logo}/>
-            </ContentPosition>
-            
-            <MenuBar>
-               <Links to={'/'}>INÍCIO</Links> 
-               <Links to={'/sobre'}>QUEM SOMOS</Links> 
-               <Links to={'/cardapio'}>CARDÁPIO</Links>
-               
-               
-               {/* <Links onClick={abrirModal}>ENTRE OU CADASTRE-SE</Links> */}
-
-                {/* Renderize o componente LoginModal e passe as funções de abrir e fechar modal como propriedades */}
-                {/* <LoginModal isOpen={modalAberto} onRequestClose={fecharModal} /> */}
-            </MenuBar>
-            <ContentPosition posicao="rigth">
-               <ButtonIfood label={'peça pelo Ifood'} link={'https://www.ifood.com.br/'} target={'blank'}/> 
-
+        <>
+            <HeaderContainer isScrolled={isScrolled}>
+              <ContentPosition posicao="left">
+                <ImageLogo src={logo}/>
               </ContentPosition>
-        </HeaderContainer>
+              
+              <MenuBar>
+                <Links to={'/'}>INÍCIO</Links> 
+                <Links to={'/sobre'}>QUEM SOMOS</Links> 
+                <Links to={'/cardapio'}>CARDÁPIO</Links>
+                
+                
+                {/* <Links onClick={abrirModal}>ENTRE OU CADASTRE-SE</Links> */}
+
+                  {/* Renderize o componente LoginModal e passe as funções de abrir e fechar modal como propriedades */}
+                  {/* <LoginModal isOpen={modalAberto} onRequestClose={fecharModal} /> */}
+              </MenuBar>
+              <ContentPosition posicao="rigth">
+                <ButtonIfood label={'peça pelo Ifood'} link={'https://www.ifood.com.br/'} target={'blank'}/> 
+
+                </ContentPosition>
+          </HeaderContainer>
+          <MenuMobile menuAberto={menuAberto}>
+              <ContentmenuMobile posicao="left">
+                <ImageLogo src={logo}/>
+                <button onClick={abrirMenu}>X</button>
+              </ContentmenuMobile>
+              <MenuBarMobile menuAberto={menuAberto}>
+                <ContentSpaceMenu>
+                  <LinksMobile to={'/'}>INÍCIO</LinksMobile> 
+                  <LinksMobile to={'/sobre'}>QUEM SOMOS</LinksMobile> 
+                  <LinksMobile to={'/cardapio'}>CARDÁPIO</LinksMobile>
+                </ContentSpaceMenu>
+                <ButtonIfood label={'peça pelo Ifood'} link={'https://www.ifood.com.br/'} target={'blank'}/> 
+              </MenuBarMobile>
+          </MenuMobile>
+        </>
     )
 }
