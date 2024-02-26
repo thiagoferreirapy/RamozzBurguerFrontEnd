@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import background from '../../images/background2.svg'
 
 export const Main = styled.main`
-    width: 100%;
+    max-width: 1500px;
+    width: 100vw;
+    background: red;
 `;
 
 export const ContainerInicial = styled.div`
@@ -16,6 +18,7 @@ export const ContainerInicial = styled.div`
     justify-content: center;
     /* filter: brightness(0.9) grayscale(0.5); */
     height: 90vh;
+    width: 100%;
 `;
 
 export const ContentTitle = styled.div`
@@ -46,13 +49,21 @@ export const ContentInformationsSobre = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100vw;
+    
+    @media (max-width: 1200px){
+        background-color: red;
+    }
 `
 
 export const ContentInformations = styled.div`
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 1200px){
+        background-color: #0011ff;
+    }
 `
 export const ContentTextSobre = styled.div`
     height: 500px;
@@ -60,6 +71,10 @@ export const ContentTextSobre = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 1200px){
+        background-color: #ff00bf;
+    }
+    
 `
 export const TitleInformation = styled.h3`
     font-size: 25px;
@@ -87,6 +102,9 @@ export const ContentImages = styled.div`
     width: 490px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1200px){
+        background-color: #1eff00;
+    }
 `
 export const ContentColumOne = styled.div`
     width: 280px;

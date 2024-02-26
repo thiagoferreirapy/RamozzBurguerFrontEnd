@@ -148,7 +148,6 @@ export const ImageBackgroundBurguer = styled.img`
     bottom: -100px;
     left: -150px;
     z-index: -1;
-
     @media (max-width: 650px){
         display: none;
     }

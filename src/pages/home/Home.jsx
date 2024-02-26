@@ -19,7 +19,7 @@ export default function Home() {
     
     return (
         <Main>
-            <Header currentPage="home"/>
+            {/* <Header currentPage="home"/> */}
             <ContainerInicial>
                 <ContentTitle>
                     <br/><br/>
