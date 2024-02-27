@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 
 export const FooterContainer = styled.section`
-    max-width: 1500px;
-    width: 100vw;
+    width: 100%;
     background-color: ${(props) => props.theme.colors.black};
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: center;
     
 
     /* @media (max-width: 1200px){
@@ -29,6 +29,10 @@ export const ContentFooter = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
 
     @media (max-width: 760px){
         flex-direction: column;

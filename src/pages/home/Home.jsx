@@ -1,5 +1,4 @@
 import Logo from '../../components/Logo';
-import Header from '../../layouts/header/Header';
 import  {Main, ContainerInicial, ContentTitle,
     Title, SubTitle, ContentButtonLink,
     Text, ContainerSobre, ContainerGalery, ContainerOrcamento } from './style';
@@ -13,12 +12,15 @@ import ContentGalery from '../../components/Galeria/ContentGalery';
 import 'swiper/swiper-bundle.css';
 import ContentOrcamento from '../../components/Orcamento/ContentOrcamento';
 import Button from '../../components/Button';
+import Header from '../../layouts/header/Header';
+import Footer from '../../layouts/footer/Footer';
 
 
 export default function Home() { 
     
     return (
         <Main>
+            <Header/>
             {/* <Header currentPage="home"/> */}
             <ContainerInicial>
                 <ContentTitle>
@@ -42,6 +44,7 @@ export default function Home() {
             <ContainerOrcamento>
                 <ContentOrcamento />
             </ContainerOrcamento>
+            <Footer/>
         </Main>
     );
 }

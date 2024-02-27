@@ -34,6 +34,9 @@ export default function Sobre() {
                     <ParagraphInformation>
                         O segredo do sucesso de Maria não estava apenas na qualidade excepcional dos hambúrgueres, mas também em seu comprometimento em utilizar ingredientes frescos e de alta qualidade. A atmosfera calorosa e acolhedora do local, aliada à dedicação incansável da empreendedora, conquistou os corações dos clientes. A história da Ramozz Burguers não é apenas sobre a deliciosa culinária, mas também sobre a determinação de uma mulher apaixonada, cuja visão empreendedora transformou sonhos em realidade, deixando uma marca irresistível na vida de todos que cruzam as portas dessa hamburgueria única.
                     </ParagraphInformation>
+                    <div style={{ marginTop: '30px'}}>
+                <Button label={'Peça Já!'} link={'https://web.whatsapp.com/send?phone=5561994162084'} target={'blank'}/>
+                </div>
                   </ContentTextSobre>
                   <ContentImages>
                     <ContentColumOne>
@@ -49,9 +52,7 @@ export default function Sobre() {
                   
                   </ContentImages>
                 </ContentInformations>
-                <div style={{ marginTop: '30px', marginLeft: '90px' }}>
-                <Button label={'Peça Já!'} link={'https://web.whatsapp.com/send?phone=5561994162084'} target={'blank'}/>
-                </div>
+                
             </ContentInformationsSobre>
         </Main>
     );

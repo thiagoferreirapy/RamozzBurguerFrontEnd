@@ -3,13 +3,17 @@ import background from '../../images/background2.svg'
 
 
 export const Main = styled.main`
-    background: red;
-    max-width: 1500px;
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 
 export const ContainerInicial = styled.div`
-    /* background-image: url(${background}); */
+    background-image: url(${background});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,9 +22,13 @@ export const ContainerInicial = styled.div`
     align-items: center;
     justify-content: center;
     /* filter: brightness(0.9) grayscale(0.5); */
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: green;
+
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
+    
     @media (max-width: 1100px) and (orientation: landscape){
         height: 800px;  
     }
@@ -142,14 +150,17 @@ export const Text = styled.p`
 
 
 export const ContainerSobre = styled.section`
-    width: 100vw;
+    width: 100%;
     height: 750px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    background-color: blue;
+    /* background-color: blue; */
 
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
     @media (max-width: 1300px){
         justify-content: center;
     }
@@ -172,25 +183,31 @@ export const ContainerSobre = styled.section`
 
 export const ContainerGalery = styled.section`
     /* height: 750px; */
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 30px 30px 30px;
-    /* background-color: ${(props) => props.theme.colors.black}; */
-    background-color: yellow;
+    background-color: ${(props) => props.theme.colors.black};
+    /* background-color: yellow; */
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
 `
 
 
 export const ContainerOrcamento = styled.section`
     height: 700px;
-    width: 100vw;
+    width: 100%;
     /* height: 750px; */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px 30px;
-    background-color: green;
+    /* background-color: green; */
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
     /* @media (max-width: 1150px){
         background-color: red;
     }

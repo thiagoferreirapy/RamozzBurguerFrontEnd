@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import background from '../../images/background2.svg'
 
 export const Main = styled.main`
-    width: 100vw;
-    margin-bottom: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ContainerInicial = styled.div`
@@ -19,6 +22,9 @@ export const ContainerInicial = styled.div`
     height: 90vh;
     width: 100%;
 
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
     @media (max-width: 650px){
         height: 850px;
     }
@@ -145,6 +151,9 @@ export const ContainerCardapio = styled.section`
    
     align-items: center;
     
+    @media (min-width: 1500px){
+        width: 70%; 
+    }
 `
 
 export const CardapioNavbar = styled.div`
@@ -154,6 +163,10 @@ export const CardapioNavbar = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 1000px){
+        width: 100%;
+        flex-wrap: wrap;
+    }
 `
 
 export const LinkNavbar = styled.a`
@@ -168,6 +181,10 @@ export const LinkNavbar = styled.a`
        color: #365C32;
        font-weight: 600;
        border-bottom: 2px solid ${(props) => props.theme.colors.black};
+    }
+
+    @media (max-width: 1000px){
+        margin: 10px;
     }
     `
 
