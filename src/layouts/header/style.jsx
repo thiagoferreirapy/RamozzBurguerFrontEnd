@@ -10,9 +10,9 @@ export const alturaMobile = keyframes`
     }
     
 `;
-
+// #202021dd
 export const MenuMobile = styled.section`
-    background-color: ${(props) => (props.menuAberto == true ? '#202021' : '#202021dd')};
+    background-color: ${(props) => (props.menuAberto == true ? '#202021' : '#0000ffdd')};
     width: 100%;
     height: ${(props) => (props.menuAberto == true ? '100%' : '100px')};
     display: none;

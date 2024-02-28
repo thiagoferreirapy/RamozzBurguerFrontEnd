@@ -72,7 +72,7 @@ export const ContentInformationsSobre = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
     @media (max-width: 1200px){

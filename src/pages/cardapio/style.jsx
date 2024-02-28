@@ -22,7 +22,7 @@ export const ContainerInicial = styled.div`
     height: 90vh;
     width: 100%;
 
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
     @media (max-width: 650px){

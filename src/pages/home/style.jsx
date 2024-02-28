@@ -25,7 +25,7 @@ export const ContainerInicial = styled.div`
     width: 100%;
     height: 100vh;
 
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
     
@@ -158,7 +158,7 @@ export const ContainerSobre = styled.section`
     position: relative;
     /* background-color: blue; */
 
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
     @media (max-width: 1300px){
@@ -190,7 +190,7 @@ export const ContainerGalery = styled.section`
     padding: 50px 30px 30px 30px;
     background-color: ${(props) => props.theme.colors.black};
     /* background-color: yellow; */
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
 `
@@ -205,7 +205,7 @@ export const ContainerOrcamento = styled.section`
     justify-content: center;
     padding: 50px 30px;
     /* background-color: green; */
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
     /* @media (max-width: 1150px){

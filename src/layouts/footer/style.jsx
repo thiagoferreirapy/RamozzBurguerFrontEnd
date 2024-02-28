@@ -30,7 +30,7 @@ export const ContentFooter = styled.section`
     align-items: center;
     justify-content: space-around;
 
-    @media (min-width: 1500px){
+    @media (min-width: 1550px){
         width: 70%; 
     }
 
