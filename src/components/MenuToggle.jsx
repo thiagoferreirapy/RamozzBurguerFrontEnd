@@ -9,7 +9,7 @@ const HamburguerMenu = styled.div`
   justify-content: space-between;
   cursor: pointer;
   transition: transform 0.3s ease;
-
+  touch-action: manipulation;
   span {
     width: 100%;
     height: 3px;
