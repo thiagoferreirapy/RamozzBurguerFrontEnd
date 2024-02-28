@@ -87,7 +87,7 @@ export default function Header({ currentPage }){
                 <MenuToggle onToggle={toggleModal} />
               </ContentmenuMobile>
               <MenuBarMobile menuAberto={menuAberto}>
-                <ContentSpaceMenu>
+                <ContentSpaceMenu menuAberto={menuAberto}>
                   <LinksMobile to={'/'}>INÍCIO</LinksMobile> 
                   <LinksMobile to={'/sobre'}>QUEM SOMOS</LinksMobile> 
                   <LinksMobile to={'/cardapio'}>CARDÁPIO</LinksMobile>

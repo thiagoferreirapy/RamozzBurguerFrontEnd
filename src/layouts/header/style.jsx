@@ -51,17 +51,16 @@ export const ContentmenuMobile = styled.div`
 export const MenuBarMobile = styled.div`
     background-color: transparent;
     width: 100%;
-    height: 60%;
     display: flex;
     
-    ${(props) => (props.menuAberto === true ? 'opacity: 100%;' : 'opacity: 0%;')};
+    /* ${(props) => (props.menuAberto === true ? 'opacity: 100%;' : 'opacity: 0%;')}; */
     /* ${(props) => (props.menuAberto === true ? 'display: flex;' : 'display: none;')}; */
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
     font-size: 50px;
-    background-color: red;
+    /* background-color: red; */
 
     @media (max-width: 850px) and (orientation: landscape){
         margin-top: 0px;
@@ -80,11 +79,13 @@ export const ContentSpaceMenu = styled.div`
     background-color: transparent;
     width: 100%;
     height: 55%;
+    ${(props) => (props.menuAberto === true ? 'opacity: 100%;' : 'opacity: 0%;')};
     padding: 15px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 `;
 
 export const LinksMobile = styled(Link)`
@@ -96,7 +97,7 @@ export const LinksMobile = styled(Link)`
     transition: 0.3s all ease-in-out;
     border-bottom: 2px solid transparent;
     /* background-color: yellow; */
-    
+    margin: 30px ;
     &:hover{
         color: #365C32;
         font-weight: 600;
