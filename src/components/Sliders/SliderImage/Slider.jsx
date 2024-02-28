@@ -23,6 +23,7 @@ export default function Slider (){
   
     return (
       <Swiper
+        lazy={true}
         // install Swiper modules
         modules={[Navigation, Pagination, EffectFade, Autoplay]}
         slidesPerView={1}

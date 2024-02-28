@@ -24,6 +24,7 @@ export default function SliderImages (){
   
     return (
       <Swiper
+        lazy={true}
         // install Swiper modules
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={2}
