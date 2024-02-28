@@ -27,9 +27,10 @@ export const MenuMobile = styled.section`
 
     @media (max-width: 750px){
         display: flex;
-        
+        padding-bottom: 30px
     }
 
+    
     /* background-color: blue; */
 `;
 
@@ -44,7 +45,6 @@ export const ContentmenuMobile = styled.div`
     align-items: center;
     justify-content: space-between;
     
-
     
 `;
 
@@ -63,6 +63,12 @@ export const MenuBarMobile = styled.div`
 
     @media (max-width: 850px) and (orientation: landscape){
         margin-top: 0px;
+        padding: 0px 50px;
+    }
+
+    @media (max-width: 750px) and (orientation: landscape){
+        position: absolute;
+        bottom: 10px;
         padding: 0px 50px;
     }
     
