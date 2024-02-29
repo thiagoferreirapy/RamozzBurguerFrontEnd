@@ -92,7 +92,7 @@ export default function Header({ currentPage }){
                   <LinksMobile to={'/sobre'}>QUEM SOMOS</LinksMobile> 
                   <LinksMobile to={'/cardapio'}>CARDÁPIO</LinksMobile>
                 </ContentSpaceMenu>
-                <ButtonIfood label={'peça pelo Ifood'} link={'https://www.ifood.com.br/'} target={'blank'}/> 
+                  <ButtonIfood label={'peça pelo Ifood'} link={'https://www.ifood.com.br/'} target={'blank'}/> 
               </MenuBarMobile>
           </MenuMobile>
         </>

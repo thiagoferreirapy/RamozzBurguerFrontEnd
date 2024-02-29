@@ -10,19 +10,28 @@ export const alturaMobile = keyframes`
     }
     
 `;
+export const opacityStyle = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+    
+`;
 // #202021dd
 export const MenuMobile = styled.section`
-    background-color: ${(props) => (props.menuAberto == true ? '#202021' : '#0000ffdd')};
+    background-color: ${(props) => (props.menuAberto === true ? '#202021' : '#0000ffdd')};
     width: 100%;
-    height: ${(props) => (props.menuAberto == true ? '100%' : '100px')};
+    height: ${(props) => (props.menuAberto === true ? '100%' : '100px')};
     display: none;
     flex-direction: column;
-    position: ${(props) => (props.menuAberto == true ? 'fixed' : 'absolute')};
+    position: ${(props) => (props.menuAberto === true ? 'fixed' : 'absolute')};
     touch-action: manipulation;
     top: 0;
     z-index: 2;
     transition: 0.5s all linear;
-    ${(props) => props.menuAberto && css`animation: ${alturaMobile} 0.3s ease-in-out;`}
+    /* ${(props) => props.menuAberto && css`animation: ${alturaMobile} 0.3s ease-in-out;`} */
     
 
     @media (max-width: 750px){
@@ -36,7 +45,7 @@ export const MenuMobile = styled.section`
 
 
 export const ContentmenuMobile = styled.div`
-    background-color: ${(props) => (props.menuAberto == true ? '#202021' : '#2020210')};
+    background-color: ${(props) => (props.menuAberto === true ? '#202021' : '#2020210')};
     max-width: 1500px;
     width: 100%;
     height: 140px;
@@ -53,13 +62,18 @@ export const MenuBarMobile = styled.div`
     width: 100%;
     display: flex;
     
-    /* ${(props) => (props.menuAberto === true ? 'opacity: 100%;' : 'opacity: 0%;')}; */
-    /* ${(props) => (props.menuAberto === true ? 'display: flex;' : 'display: none;')}; */
+    ${(props) => (props.menuAberto === true ? 'display: flex;' : 'display: none;')}
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
     font-size: 50px;
+    ${(props) =>
+        props.menuAberto &&
+        css`
+            animation: ${opacityStyle} 1.5s ease-in-out;
+        `};
+    /* ${(props) => props.menuAberto && css`animation: ${opacityStyle} 0.10s ease-in-out;`} */
     /* background-color: red; */
 
     @media (max-width: 850px) and (orientation: landscape){
