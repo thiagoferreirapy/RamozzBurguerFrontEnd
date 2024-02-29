@@ -21,7 +21,7 @@ export const opacityStyle = keyframes`
 `;
 // #202021dd
 export const MenuMobile = styled.section`
-    background-color: ${(props) => (props.menuAberto === true ? '#202021' : '#0000ffdd')};
+    background-color: ${(props) => (props.menuAberto === true ? '#202021' : '#202021dd')};
     width: 100%;
     height: ${(props) => (props.menuAberto === true ? '100%' : '100px')};
     display: none;
