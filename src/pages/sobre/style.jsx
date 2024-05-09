@@ -27,6 +27,9 @@ export const ContainerInicial = styled.div`
         height: 100vh;
     }
 
+    @media (max-width: 900px) and (orientation: landscape){
+        height: 700px;
+    }
 
 `;
 
@@ -61,8 +64,8 @@ export const SubTitle = styled.h2`
         font-size: 25px;
         text-align: center;
     }
-    @media (max-width: 390px){
-        font-size: 20px;
+    @media (max-width: 490px){
+        font-size: 18px;
         text-align: center;
     }
 `

@@ -15,6 +15,7 @@ import Footer from './layouts/footer/Footer';
 import Sobre from './pages/sobre/Sobre'
 import Cardapio from './pages/cardapio/Cardapio.jsx';
 import Header from './layouts/header/Header.jsx';
+import Delivery from './pages/delivery/Delivery.jsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path="sobre" element={<Sobre />} />
                 <Route path="cardapio" element={<Cardapio />} />
+                <Route path="delivery" element={<Delivery />} />
               </Routes>
           {/* <Footer /> */}
         </ScrollProvider>

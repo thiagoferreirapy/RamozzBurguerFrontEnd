@@ -28,6 +28,9 @@ export const ContainerInicial = styled.div`
     @media (max-width: 650px){
         height: 850px;
     }
+    @media (max-width: 900px) and (orientation: landscape){
+        height: 800px;
+    }
 `;
 
 export const ContentTitle = styled.div`
