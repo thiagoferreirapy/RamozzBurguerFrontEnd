@@ -48,12 +48,11 @@ export const ContentmenuMobile = styled.div`
     background-color: ${(props) => (props.menuAberto === true ? '#202021' : '#2020210')};
     max-width: 1500px;
     width: 100%;
-    height: 140px;
+    height: 100px;
     padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     
 `;
 
@@ -66,7 +65,7 @@ export const MenuBarMobile = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 0px;
     font-size: 50px;
     ${(props) =>
         props.menuAberto &&
@@ -99,7 +98,7 @@ export const ContentSpaceMenu = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 `;
 
 export const LinksMobile = styled(Link)`
@@ -111,7 +110,7 @@ export const LinksMobile = styled(Link)`
     transition: 0.3s all ease-in-out;
     border-bottom: 2px solid transparent;
     /* background-color: yellow; */
-    margin: 30px ;
+    margin: 25px ;
     &:hover{
         color: #365C32;
         font-weight: 600;
@@ -125,6 +124,10 @@ export const LinksMobile = styled(Link)`
 
     @media (max-width: 750px){
         font-size: 20px;
+        
+    }
+    @media (max-width: 350px){
+        font-size: 16px;
         
     }
 `;
@@ -193,7 +196,8 @@ export const Links = styled(Link)`
     /* margin-left: 50px; */
     font-size: 16px;
     font-weight: 600;
-    color: #ffff;
+    
+    color: #FFF;
     text-decoration: none;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
@@ -213,3 +217,23 @@ export const Links = styled(Link)`
 `;
 
 
+export const ContentButton = styled.button`
+    text-decoration: none;
+    color: #fff;
+    width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a6a46;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s all ease-in-out;
+    &:hover{
+        background-color: ${(props) => props.theme.colors.green};
+        filter: none;
+        opacity: 100%;
+    }
+`
