@@ -19,9 +19,11 @@
 - Site responsivo
 - Página Home
 - Página Sobre
-- Página cardápio
+- Página Cardápio
+- Página Delivery
+- Carrinho de compras
 - Integração com o Back-end
-- Apis
+- Consumo de Apis
 </ul>
 
 
@@ -31,9 +33,9 @@
   
   - Cadastro de usuário
   - Criar pedidos referente a cada usuário
-  - Páginas para fazer pedido
   - Integração com metódo de pagamento
   - Envio de e-mail/sms para usuários
+    
 </ul>
 
 
@@ -95,6 +97,7 @@ Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados 
   - Página Home: [http://localhost:5173/](http://localhost:5173/) 
   - Página Sobre: [http://localhost:5173/sobre](http://localhost:5173/sobre)
   - Página Cardápio: [http://localhost:5173/cardapio](http://localhost:5173/cardapio)
+  - Página Delivery: [http://localhost:5173/delivery](http://localhost:5173/delivery)
   </ul>
 
 <br/>
